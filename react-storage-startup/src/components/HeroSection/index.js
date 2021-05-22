@@ -31,7 +31,7 @@ const HeroSection = () => {
                     Sign up for a new account today to start enjoying your new free space at home.
                 </HeroP>
                 <HeroBtnWrapper>
-                    <Button to='signup' onMouseEnter={onHover} onMouseLeave={onHover}>
+                    <Button to='signup' onMouseEnter={onHover} onMouseLeave={onHover} primary='true' dark='true'>
                         Get started {hover ? <ArrowForward /> : <ArrowRight />}
                     </Button>
                 </HeroBtnWrapper>
