@@ -12,7 +12,9 @@ export const homeObjOne = {
     alt: 'Woman with packages',
     dark: true,
     primary: true,
-    darkText: false
+    darkText: false,
+    location: 'home',
+    scrollLink: true
 };
 
 export const homeObjTwo = {
@@ -29,7 +31,9 @@ export const homeObjTwo = {
     alt: 'Woman selecting options for purchase',
     dark: false,
     primary: false,
-    darkText: true
+    darkText: true,
+    location: 'home',
+    scrollLink: true
 };
 
 export const homeObjThree = {
@@ -46,5 +50,7 @@ export const homeObjThree = {
     alt: 'Man signing up',
     dark: false,
     primary: false,
-    darkText: true
+    darkText: true,
+    location: '/signup',
+    scrollLink: false
 };

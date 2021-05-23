@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from '../ButtonElement';
+import { Button, ButtonR } from '../ButtonElement';
 import {
     InfoContainer,
     InfoWrapper,
@@ -15,7 +15,7 @@ import {
     Img
 } from './InfoElements';
 
-const InfoSection = ({ lightBg, id, imgStart, topLine, lightText, headline, darkText, description, buttonLabel, img, alt, primary, dark, dark2 }) => {
+const InfoSection = ({ lightBg, id, imgStart, topLine, lightText, headline, darkText, description, buttonLabel, img, alt, primary, dark, dark2, location, scrollLink }) => {
     return (
         <div>
             <InfoContainer lightBg={lightBg} id={id}>
@@ -27,18 +27,32 @@ const InfoSection = ({ lightBg, id, imgStart, topLine, lightText, headline, dark
                                 <Heading lightText={lightText}>{headline}</Heading>
                                 <Subtitle darkText={darkText}>{description}</Subtitle>
                                 <BtnWrap>
-                                    <Button to='home' 
-                                    smooth={true} 
-                                    duration={500} 
-                                    spy={true} 
-                                    exact={true} 
-                                    offset={-80} 
-                                    primary={primary? 1 : 0} 
-                                    dark={dark ? 1 : 0}
-                                    dark2={dark2 ? 1 : 0}
-                                    >
-                                        {buttonLabel}
-                                    </Button>
+                                    {scrollLink ? 
+                                        <Button to={location} 
+                                            smooth={true} 
+                                            duration={500} 
+                                            spy={true} 
+                                            exact={true} 
+                                            offset={-80} 
+                                            primary={primary? 1 : 0} 
+                                            dark={dark ? 1 : 0}
+                                            dark2={dark2 ? 1 : 0}
+                                        >
+                                            {buttonLabel}
+                                        </Button> : 
+                                        <ButtonR to={location} 
+                                            smooth={true} 
+                                            duration={500} 
+                                            spy={true} 
+                                            exact={true} 
+                                            offset={-80} 
+                                            primary={primary? 1 : 0} 
+                                            dark={dark ? 1 : 0}
+                                            dark2={dark2 ? 1 : 0}
+                                        >
+                                            {buttonLabel}
+                                        </ButtonR>
+                                    }
                                 </BtnWrap>
                             </TextWrapper>
                         </Column1>
