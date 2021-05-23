@@ -15,7 +15,7 @@ const Home = () => {
     }
 
     return (
-        <div>
+        <>
             <Sidebar isOpen={isOpen} toggle={toggle}/>
             <Navbar toggle={toggle}/>
             <HeroSection />
@@ -24,7 +24,7 @@ const Home = () => {
             <Services />
             <InfoSection {...homeObjThree}/>
             <Footer />
-        </div>
+        </>
     );
 }
 
